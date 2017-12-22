@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>SimpleServletProject</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>xmlServlet</servlet-name> <!-- You can give any name here, its not like it should be same as Class name -->
+  											<!-- The reason why we give servlet name is so that we also going to map this to particular 'URL pattern' -->
+  	<servlet-class>com.gdg.rocky.XmlServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>  <!-- what servlet maping dpoes is it takes a particulat servlet you have defined here and maps it to particular URL -->
+  	<servlet-name>xmlServlet</servlet-name>     <!-- tis is the name of the servlet -->
+  	<url-pattern>/xmlServletpath</url-pattern>	<!-- this is the url mapping -->
+  </servlet-mapping>
+  
+</web-app>
